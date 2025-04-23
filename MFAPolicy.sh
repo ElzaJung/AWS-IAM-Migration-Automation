@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Replace with your AWS account ID
-ACCOUNT_ID="559050228578"
+ACCOUNT_ID="ACCOUNT_ID"
 
 # List of group names
 GROUP_NAMES=("CloudAdmin" "DBA" "LinuxAdmin" "NetworkAdmin")
