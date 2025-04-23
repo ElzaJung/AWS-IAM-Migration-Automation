@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Replace with your AWS account ID
-ACCOUNT_ID="INSERT-ACCOUNT_ID" # <------ Replace with your AWS account ID
+ACCOUNT_ID="559050228578"
 
 # List of group names
 GROUP_NAMES=("CloudAdmin" "DBA" "LinuxAdmin" "NetworkAdmin")
 
 # IAM policy ARN for the custom policy
-POLICY_ARN="arn:aws:iam::$ACCOUNT_ID:policy/MFAPolicy"
+POLICY_ARN="arn:aws:iam::$ACCOUNT_ID:policy/EnforceMFAPolicy"
 
 # Function to check if a group exists
 group_exists() {
@@ -30,3 +30,8 @@ for GROUP_NAME in "${GROUP_NAMES[@]}"; do
     echo "Group $GROUP_NAME does not exist"
   fi
 done
+
+# Make the script executable
+# chmod +x ./MFAPolicy.sh
+# Run the script
+# ./MFAPolicy.sh

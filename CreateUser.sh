@@ -1,9 +1,6 @@
+# Automated user creation in the AWS
+
 #!/bin/bash
-# Purpose: Automated user creation in the AWS
-# How to: ./aws-iam-create-user.sh <entry file format .csv>
-# Entry file column name: user, group, password
-# Author: Elza Jung
-# ------------------------------------------
 
 INPUT=$1
 OLDIFS=$IFS
@@ -27,3 +24,9 @@ do
 done < $INPUT
 
 IFS=$OLDIFS
+
+# Make the script executable
+# chmod +x ./CreateUser.sh
+
+# Run the script
+# ./CreateUser.sh AWS_Users.csv

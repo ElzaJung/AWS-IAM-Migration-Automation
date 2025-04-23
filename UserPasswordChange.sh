@@ -1,13 +1,15 @@
+# Add IAMUserChangePassword policy to groups
+
 #!/bin/bash
 
 # Replace with your AWS account ID
-ACCOUNT_ID="INSERT-ACCOUNT_ID" # Insert Account ID here
+ACCOUNT_ID="ACCOUNT_ID"
 
 # List of group names
 GROUP_NAMES=("CloudAdmin" "DBA" "LinuxAdmin" "NetworkAdmin")
 
-# IAM policy ARN for the UserPasswordChange policy
-POLICY_ARN_CHANGE_PASSWORD="arn:aws:iam::aws:policy/UserPasswordChange"
+# IAM policy ARN for the IAMUserChangePassword policy
+POLICY_ARN_CHANGE_PASSWORD="arn:aws:iam::aws:policy/IAMUserChangePassword"
 
 # Function to check if a group exists
 group_exists() {
@@ -30,3 +32,6 @@ for GROUP_NAME in "${GROUP_NAMES[@]}"; do
     echo "Group $GROUP_NAME does not exist"
   fi
 done
+
+# chmod +x ./UserPasswordChange.sh
+# ./UserPasswordChange.sh
